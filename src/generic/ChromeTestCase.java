@@ -28,33 +28,11 @@ public class ChromeTestCase {
         driver.manage().timeouts().implicitlyWait(60, TimeUnit.SECONDS);
     }
 
-//    @BeforeTest
-//    public void start() {
-//        try{
-//            driver = new ChromeDriver();
-//        } catch (Exception ex){
-//            System.out.println(ex);
-//        }
-//    }
-
     @AfterClass(alwaysRun = true)
     public void tearDown() throws Exception {
         if (driver != null) {
             driver.quit();
         }
     }
-
-//    @AfterClass(alwaysRun = true)
-//    public void after() {
-//        chromeFunctionality.closeChrome();
-//    }
-//
-//    protected void pause(long milis){
-//        try {
-//            Thread.sleep(milis);
-//        } catch (InterruptedException e) {
-//            e.printStackTrace();
-//        }
-//    }
 
 }

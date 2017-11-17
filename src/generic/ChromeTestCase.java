@@ -23,8 +23,8 @@ public class ChromeTestCase {
         System.setProperty("webdriver.chrome.driver", "chromedriver");
         driver = new ChromeDriver(options);
         driver.manage().timeouts().setScriptTimeout(60, TimeUnit.SECONDS);
-        driver.manage().timeouts().pageLoadTimeout(150, TimeUnit.SECONDS);
-        driver.manage().timeouts().implicitlyWait(60, TimeUnit.SECONDS);
+        driver.manage().timeouts().pageLoadTimeout(60, TimeUnit.SECONDS);
+        driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
     }
 
     @AfterClass(alwaysRun = true)

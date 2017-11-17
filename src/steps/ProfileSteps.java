@@ -13,7 +13,7 @@ public class ProfileSteps {
         String actualHeaderText = new ProfilePage().getHeaderText();
         String expectedHeaderText = "Create your free account to see rates";
         if (!actualHeaderText.contentEquals(expectedHeaderText)) {
-            errorList.add("Profile header didn't match expecting\nActual: '" + actualHeaderText + "'" +
+            errorList.add("\nProfile header didn't match expecting\nActual: '" + actualHeaderText + "'" +
                     "\nExpected: '" + expectedHeaderText + "");
         }
         return errorList;
@@ -26,7 +26,8 @@ public class ProfileSteps {
         profilePage.getPrimaryPhoneNumberInput().sendKeys("1112223333");
         profilePage.getHousingStatusDD().get(1).click();
         profilePage.getPermanentAddressInput().sendKeys(
-                "Ukraine Express LLC, Falstrom Court, Passaic, NJ, United States");
+                "Ukraine");
+        profilePage.getAddressHints().get(1).click();
         profilePage.getUnitInput().sendKeys("1");
         profilePage.getCitizenDD().get(1).click();
         profilePage.getSocialSecurityInput().sendKeys("123111234");
@@ -43,7 +44,7 @@ public class ProfileSteps {
         String date = new Date().toString().substring(3, 10).replace(" ", "");
         DateFormat dateFormat = new SimpleDateFormat("HHmm");
         String time = dateFormat.format(new Date());
-        return String.format("%s%s%s@%s.com", nick, date, time, domain);
+        return String.format("%s+%s+%s@%s.com", nick, date, time, domain);
     }
 
     public String getWrongEmail(String nick, String domain){
@@ -64,6 +65,7 @@ public class ProfileSteps {
             errorList.add("\nPhone tip's text didn't match expecting\nActual: '" + actualTipText + "'" +
                     "\nExpected: '" + expectedTipText + "'");
         }
+        profilePage.clickPrimaryPhoneNumberTipLink();
         return errorList;
     }
 
@@ -77,6 +79,7 @@ public class ProfileSteps {
             errorList.add("\nCitizenship status tip's text didn't match expecting\nActual: '" + actualTipText + "'" +
                     "\nExpected: '" + expectedTipText + "'");
         }
+        profilePage.clickCitizenTipLink();
         return errorList;
     }
 
@@ -90,6 +93,7 @@ public class ProfileSteps {
             errorList.add("\nSSN tip's text didn't match expecting\nActual: '" + actualTipText + "'" +
                     "\nExpected: '" + expectedTipText + "'");
         }
+        profilePage.clickSocialSecurityTipLink();
         return errorList;
     }
 

@@ -31,13 +31,8 @@ public class MainTest extends ChromeTestCase{
         errorList = profileSteps.verifySsnTip(errorList);
         errorList = profileSteps.verifyPhoneTip(errorList);
 
-        String wrongEmail = profileSteps.getWrongEmail("Ihor", "gmail");
-        String pass = "123456Aa";
-        profileSteps.fillEmailAndPass(wrongEmail, pass);
-        profileSteps.clickSubmit();
-        errorList = profileSteps.verifyEmailErrorMsg(errorList);
-
         String email = profileSteps.getEmail("Ihor", "gmail");
+        String pass = "123456Aa";
         profileSteps.fillEmailAndPass(email, pass);
         profileSteps.clickSubmit();
 

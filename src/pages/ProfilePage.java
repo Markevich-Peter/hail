@@ -8,26 +8,25 @@ import java.util.List;
 
 public class ProfilePage extends pages.Page{
 
-    private String header = "(//h3[@class='big-title'])[1]";
+    private String header = "(//h3[@class='big-title'])[2]";
 
-    private String firstName = "c386_borrower_first_name";
-    private String lastName = "c386_borrower_last_name";
-    private String primaryPhoneNumberInput = "c386_borrower_phone";
-    private String primaryPhoneNumberTipLink = "//label[@for='c386_borrower_phone']/../span[@class='tooltip-text']";
+    private String firstName = "//*[contains(@id, 'borrower_first_name')]";
+    private String lastName = "//*[contains(@id, 'borrower_last_name')]";
+    private String primaryPhoneNumberInput = "//*[contains(@id, 'borrower_phone')]";
+    private String primaryPhoneNumberTipLink = "//label[contains(@for,'borrower_phone')]/../span[@class='tooltip-text']";
     private String primaryPhoneNumberTipText = "//*[@class='tooltip-inner']";
-    private String housingStatusBtn = "(//*[@class='select2-arrow'])[1]";
-    private String housingStatusDD = "//ul[@id='select2-results-331']/li";
-    private String permanentAddress = "c386_current_address_full_address";
-    private String unit = "c386_current_address_unit";
-    private String citizenshipStatusBtn = "(//*[@class='select2-arrow'])[2]";
-    private String citizenshipStatusDD = "//ul[@id='select2-results-333']/li";
-    private String citizenshipStatusTipLink = "//label[@for='c386_borrower_citizenship_status']/../span[@class='tooltip-text']";
-    //private String citizenshipStatusTipText = "//*[@class='tooltip-inner']";
-    private String socialSecurityNumberInput = "c386_borrower_ssn";
-    private String socialSecurityNumberTipLink = "//label[@for='c386_borrower_ssn']/../span[@class='tooltip-text']";
-    //private String socialSecurityNumberTipText = "//*[@class='tooltip-inner']";
-    private String email = "c477_email";
-    private String password = "c477_password";
+    private String housingStatusBtn = "(//*[@class='select2-arrow'])[5]";
+    private String housingStatusDD = "//ul[@id='select2-results-9']/li";
+    private String permanentAddress = "//*[contains(@id, 'current_address_full_address')]";
+    private String addressHints = "//div[@class='pac-item']";
+    private String unit = "//*[contains(@id, 'current_address_unit')]";
+    private String citizenshipStatusBtn = "(//*[@class='select2-arrow'])[7]";
+    private String citizenshipStatusDD = "//ul[@id='select2-results-11']/li";
+    private String citizenshipStatusTipLink = "//label[contains(@for,'borrower_citizenship_status')]/../span[@class='tooltip-text']";
+    private String socialSecurityNumberInput = "//*[contains(@id, 'borrower_ssn')]";
+    private String socialSecurityNumberTipLink = "//label[contains(@for,'borrower_ssn')]/../span[@class='tooltip-text']";
+    private String email = "//*[contains(@id, 'email')]";
+    private String password = "//*[contains(@id, 'password')]";
     private String agreeAndFindMyRatesBtn = "(//*[@class='cta cta-primary'])[2]";
     private String emailErrorMsg = "//*[@class='user-message user-message--error user-message--login-failed']";
     private String spinner = "//*[@class='loading-message four-lines']";
@@ -45,15 +44,15 @@ public class ProfilePage extends pages.Page{
     }
 
     public WebElement getFirstNameInput(){
-        return LocatorFinder.findElementByID(firstName);
+        return LocatorFinder.findElementByXpath(firstName);
     }
 
     public WebElement getLastNameInput(){
-        return LocatorFinder.findElementByID(lastName);
+        return LocatorFinder.findElementByXpath(lastName);
     }
 
     public WebElement getPrimaryPhoneNumberInput(){
-        return LocatorFinder.findElementByID(primaryPhoneNumberInput);
+        return LocatorFinder.findElementByXpath(primaryPhoneNumberInput);
     }
 
     public void clickPrimaryPhoneNumberTipLink(){
@@ -70,11 +69,15 @@ public class ProfilePage extends pages.Page{
     }
 
     public WebElement getPermanentAddressInput(){
-        return LocatorFinder.findElementByID(permanentAddress);
+        return LocatorFinder.findElementByXpath(permanentAddress);
+    }
+
+    public List<WebElement> getAddressHints(){
+        return webDriver.findElements(By.xpath(addressHints));
     }
 
     public WebElement getUnitInput(){
-        return LocatorFinder.findElementByID(firstName);
+        return LocatorFinder.findElementByXpath(unit);
     }
 
     public WebElement getCitizenBtn(){
@@ -91,7 +94,7 @@ public class ProfilePage extends pages.Page{
     }
 
     public WebElement getSocialSecurityInput(){
-        return LocatorFinder.findElementByID(socialSecurityNumberInput);
+        return LocatorFinder.findElementByXpath(socialSecurityNumberInput);
     }
 
     public void clickSocialSecurityTipLink(){
@@ -99,11 +102,11 @@ public class ProfilePage extends pages.Page{
     }
 
     public WebElement getEmailInput(){
-        return LocatorFinder.findElementByID(email);
+        return LocatorFinder.findElementByXpath(email);
     }
 
     public WebElement getPasswordInput(){
-        return LocatorFinder.findElementByID(password);
+        return LocatorFinder.findElementByXpath(password);
     }
 
     public WebElement getAgreeAndFindMyRatesBtn(){

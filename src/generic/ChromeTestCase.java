@@ -10,8 +10,7 @@ import java.util.concurrent.TimeUnit;
 
 public class ChromeTestCase {
 
-    static WebDriver driver;
-    private static ChromeOptions options;
+    protected static WebDriver driver;
 
     public static WebDriver getDriver(){
         return driver;
@@ -19,7 +18,7 @@ public class ChromeTestCase {
 
     @BeforeClass
     public void before() {
-        options = new ChromeOptions();
+        ChromeOptions options = new ChromeOptions();
         options.addArguments("chrome.switches", "--disable-extensions");
         System.setProperty("webdriver.chrome.driver", "chromedriver");
         driver = new ChromeDriver(options);

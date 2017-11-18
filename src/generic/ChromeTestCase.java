@@ -3,8 +3,8 @@ package generic;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
-import org.testng.annotations.AfterClass;
-import org.testng.annotations.BeforeClass;
+import org.testng.annotations.AfterMethod;
+import org.testng.annotations.BeforeMethod;
 
 import java.util.concurrent.TimeUnit;
 
@@ -16,7 +16,7 @@ public class ChromeTestCase {
         return driver;
     }
 
-    @BeforeClass
+    @BeforeMethod
     public void before() {
         ChromeOptions options = new ChromeOptions();
         options.addArguments("chrome.switches", "--disable-extensions");
@@ -27,7 +27,7 @@ public class ChromeTestCase {
         driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
     }
 
-    @AfterClass(alwaysRun = true)
+    @AfterMethod(alwaysRun = true)
     public void tearDown() throws Exception {
         if (driver != null) {
             driver.quit();

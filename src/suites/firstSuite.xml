@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="First suite">
+
+    <test name="firstTest">
+        <parameter name= "data1" value= "15000, Ihor, gmail, 123456Aa"/>
+        <parameter name= "data2" value= "20000, John, exchange, 123456Bb"/>
+        <classes>
+            <class name="tests.MainTest"/>
+        </classes>
+    </test>
+
+</suite>

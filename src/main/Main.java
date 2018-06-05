@@ -1,11 +1,11 @@
 package main;
 
-import utils.XmlDownloader;
+import utils.Utils;
 
 public class Main {
 
   public static void main(String[] args) {
-    String nodeValue = XmlDownloader.getNodeValueFromXml("https://beacon.nist.gov/rest/record/last", "outputValue");
-
+    String nodeValue = Utils.getNodeValueFromXml("https://beacon.nist.gov/rest/record/last", "outputValue");
+    Utils.printCharOccurrences(nodeValue);
   }
 }

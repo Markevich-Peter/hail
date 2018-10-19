@@ -37,17 +37,17 @@ public class PersonalLoanRequestPage extends Page {
 
     public List<WebElement> getLoanPurposeDD() {
         LocatorFinder.findElementByXpath(loanPurposeBtn).click();
-        return webDriver.findElements(By.xpath(loanPurposeDD));
+        return driver.findElements(By.xpath(loanPurposeDD));
     }
 
     public List<WebElement> getHighestLevelOfCompletedEducationDD() {
         LocatorFinder.findElementByXpath(highestLevelOfCompletedEducationBtn).click();
-        return webDriver.findElements(By.xpath(highestLevelOfCompletedEducationDD));
+        return driver.findElements(By.xpath(highestLevelOfCompletedEducationDD));
     }
 
     public List<WebElement> getCurrentEmploymentStatusDD() {
         LocatorFinder.findElementByXpath(currentEmploymentStatusBtn).click();
-        return webDriver.findElements(By.xpath(currentEmploymentStatusDD));
+        return driver.findElements(By.xpath(currentEmploymentStatusDD));
     }
 
     public WebElement getDateOfBirthInput() {
@@ -68,7 +68,7 @@ public class PersonalLoanRequestPage extends Page {
 
     public List<WebElement> getEstimateYourCreditScoreDD() {
         LocatorFinder.findElementByXpath(estimateYourCreditScoreBtn).click();
-        return webDriver.findElements(By.xpath(estimateYourCreditScoreDD));
+        return driver.findElements(By.xpath(estimateYourCreditScoreDD));
     }
 
     public ProfileSteps clickContinueBtn(){

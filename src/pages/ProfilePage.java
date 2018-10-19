@@ -65,7 +65,7 @@ public class ProfilePage extends pages.Page{
 
     public List<WebElement> getHousingStatusDD(){
         getHousingStatusBtn().click();
-        return webDriver.findElements(By.xpath(housingStatusDD));
+        return driver.findElements(By.xpath(housingStatusDD));
     }
 
     public WebElement getPermanentAddressInput(){
@@ -73,7 +73,7 @@ public class ProfilePage extends pages.Page{
     }
 
     public List<WebElement> getAddressHints(){
-        return webDriver.findElements(By.xpath(addressHints));
+        return driver.findElements(By.xpath(addressHints));
     }
 
     public WebElement getUnitInput(){
@@ -86,7 +86,7 @@ public class ProfilePage extends pages.Page{
 
     public List<WebElement> getCitizenDD(){
         getCitizenBtn().click();
-        return webDriver.findElements(By.xpath(citizenshipStatusDD));
+        return driver.findElements(By.xpath(citizenshipStatusDD));
     }
 
     public void clickCitizenTipLink(){

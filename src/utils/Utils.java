@@ -1,5 +1,10 @@
 package utils;
 
+import org.openqa.selenium.By;
+import org.openqa.selenium.JavascriptExecutor;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.firefox.FirefoxDriver;
 import org.w3c.dom.Document;
 import org.w3c.dom.NodeList;
 import org.xml.sax.SAXException;
@@ -65,6 +70,11 @@ public class Utils {
       if (find == 1)
         System.out.println(str.charAt(i) + "," + count[str.charAt(i)]);
     }
+  }
+
+  public static void highlightElement(WebDriver driver, WebElement element) {
+    JavascriptExecutor js = (JavascriptExecutor) driver;
+    js.executeScript("arguments[0].setAttribute('style', 'background: yellow; border: 2px solid red;');", element);
   }
 
 }

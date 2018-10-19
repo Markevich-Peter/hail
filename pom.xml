@@ -4,7 +4,7 @@
     <modelVersion>4.0.0</modelVersion>
 
     <groupId>com.mycompany.app</groupId>
-    <artifactId>credible</artifactId>
+    <artifactId>HAiL</artifactId>
     <version>1</version>
     <build>
         <plugins>
@@ -19,7 +19,7 @@
         </plugins>
     </build>
 
-    <name>credible</name>
+    <name>HAiL</name>
 
     <dependencies>
         <dependency>

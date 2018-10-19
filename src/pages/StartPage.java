@@ -9,11 +9,11 @@ public class StartPage extends Page{
     private String personalLoansLink = "//a[contains(text(), 'Personal Loans')]";
 
     public void openStartPage(){
-        webDriver.manage().window().maximize();
-        webDriver.get(url);
+        driver.manage().window().maximize();
+        driver.get(url);
     }
 
     public void clickPersonalLoansLink(){
-        webDriver.findElement(By.xpath(personalLoansLink)).click();
+        driver.findElement(By.xpath(personalLoansLink)).click();
     }
 }

@@ -12,10 +12,11 @@ public class Page {
         waitForPageLoad();
     }
 
-    WebDriver webDriver = ChromeTestCase.getDriver();
+    WebDriver driver = ChromeTestCase.getDriver();
 
+    //TODO:not working
     public void waitForPageLoad() {
-        new WebDriverWait(webDriver, 30).until((ExpectedCondition<Boolean>) wd ->
+        new WebDriverWait(driver, 30).until((ExpectedCondition<Boolean>) wd ->
                 ((JavascriptExecutor) wd).executeScript("return document.readyState").equals("complete"));
     }
 }

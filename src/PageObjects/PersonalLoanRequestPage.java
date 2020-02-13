@@ -1,4 +1,4 @@
-package pages;
+package PageObjects;
 
 import ElementWrappers.LocatorFinder;
 import org.openqa.selenium.By;

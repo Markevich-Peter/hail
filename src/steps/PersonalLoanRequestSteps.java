@@ -1,6 +1,6 @@
 package steps;
 
-import pages.PersonalLoanRequestPage;
+import PageObjects.PersonalLoanRequestPage;
 
 import java.util.ArrayList;
 

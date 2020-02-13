@@ -1,6 +1,6 @@
 package steps;
 
-import pages.ProfilePage;
+import PageObjects.ProfilePage;
 
 import java.text.DateFormat;
 import java.text.SimpleDateFormat;

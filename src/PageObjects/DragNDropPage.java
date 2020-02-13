@@ -1,11 +1,10 @@
-package pages;
+package PageObjects;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.Dimension;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
-import utils.Utils;
 
 public class DragNDropPage extends Page {
 

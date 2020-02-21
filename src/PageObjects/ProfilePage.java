@@ -1,4 +1,4 @@
-package pages;
+package PageObjects;
 
 import ElementWrappers.LocatorFinder;
 import org.openqa.selenium.By;
@@ -6,7 +6,7 @@ import org.openqa.selenium.WebElement;
 
 import java.util.List;
 
-public class ProfilePage extends pages.Page{
+public class ProfilePage extends PageObjects.Page{
 
     private String header = "(//h3[@class='big-title'])[2]";
 

@@ -1,8 +1,8 @@
 package steps;
 
-import pages.DragNDropPage;
-import pages.PersonalLoans;
-import pages.StartPage;
+import PageObjects.DragNDropPage;
+import PageObjects.PersonalLoans;
+import PageObjects.StartPage;
 
 public class GeneralSteps {
 

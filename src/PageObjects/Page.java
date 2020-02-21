@@ -1,4 +1,4 @@
-package pages;
+package PageObjects;
 
 import generic.ChromeTestCase;
 import org.openqa.selenium.JavascriptExecutor;
@@ -8,7 +8,7 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 
 public class Page {
 
-    Page(){
+    public Page(){
         waitForPageLoad();
     }
 

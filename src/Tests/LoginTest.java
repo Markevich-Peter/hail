@@ -14,7 +14,7 @@ import static org.testng.Assert.assertTrue;
 public class LoginTest extends ChromeTestCase {
 
     @Test
-    public void newTest() {
+    public void loginTest() {
         LoginSteps loginSteps = new LoginSteps();
         loginSteps.openLoginPage();
         try (InputStream input = new FileInputStream("TestData/UserAccounts.properties")) {

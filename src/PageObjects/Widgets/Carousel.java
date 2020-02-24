@@ -7,7 +7,7 @@ public interface Carousel {
 
     public void clickLeft();
     public void clickRight();
-    public CardPagination getPagination();
+    //public CardPagination getPagination();
 
 
 }

@@ -51,6 +51,6 @@ public class RegistrationTest extends ChromeTestCase {
 
         }
             regTest.registration(email, password, password2, name, phonenumber, birthdate, facebook, instagram);     //здесь используется метод login из LoginSteps
-        assertEquals(driver.getCurrentUrl(), "http://www.dirtmixer.com");
+        assertEquals(driver.getCurrentUrl(), "http://test.dirtmixer.com/#intro");                    //Изменил URL
     }
 }

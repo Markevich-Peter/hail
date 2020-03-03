@@ -2,7 +2,7 @@ package steps;
 
 import PageObjects.RegistrationPage;
 
-public class RegSteps extends GeneralSteps {
+public class RegistrationSteps extends GeneralSteps {
 
     public void openRegistrationPage() {
         RegistrationPage registrationPage = new RegistrationPage();

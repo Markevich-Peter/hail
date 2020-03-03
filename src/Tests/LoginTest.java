@@ -39,7 +39,7 @@ public class LoginTest extends ChromeTestCase {
 //           Thread.sleep(30000);
 //       }
 //       catch(Exception e){}
-        assertEquals(driver.getCurrentUrl(), "http://www.dirtmixer.com");
+        assertEquals(driver.getCurrentUrl(), "http://www.test.dirtmixer.com");
     }
 
 }

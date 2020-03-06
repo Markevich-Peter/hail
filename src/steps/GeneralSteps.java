@@ -6,11 +6,11 @@ import PageObjects.StartPage;
 
 public class GeneralSteps {
 
-    public void openStartPage() {
+    public void openStartPage(){
         new StartPage().openStartPage();
     }
 
-    public void openPageAndDragNDrop() {
+    public void openPageAndDragNDrop(){
         DragNDropPage page = new DragNDropPage();
         page.openStartPage();
         page.dragNdropContainer();

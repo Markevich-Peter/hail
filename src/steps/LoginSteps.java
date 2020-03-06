@@ -2,7 +2,7 @@ package steps;
 
 import PageObjects.LoginPage;
 
-public class LoginSteps extends GeneralSteps {
+public class LoginSteps {
 
     public void openLoginPage(){
         LoginPage loginPage = new LoginPage();

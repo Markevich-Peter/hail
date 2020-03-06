@@ -5,27 +5,29 @@ import org.openqa.selenium.Dimension;
 
 public class LoginPage extends Page {
 
-    private String txtLogin = ".//*[@id=\"login\"]";
-    private String txtPassword = ".//*[@id=\"password\"]";
+    private String txtLogin = ".//*[@id=\"login\"]";            //это строковые переменные, которым присмваивается
+    private String txtPassword = ".//*[@id=\"password\"]";      //значение локатора
     private String buttonEnter = ".//button//*[text()=\"Вход\"]";
 
-    public void openLoginPage() {
-        //driver.manage().window().maximize();
+
+    public void openLoginPage() {                              //этот метод открывает страницу ресурса и
+        //driver.manage().window().maximize();                 //управляет ею при помощи драйвера
         driver.get("http://test.dirtmixer.com/signin");
         driver.manage().window().setSize(new Dimension(1600, 900));
         String currentWindow = driver.getWindowHandle();
         driver.switchTo().window(currentWindow);
     }
 
-    public void fillLogin(String login){
-        driver.findElement(By.xpath(txtLogin)).sendKeys(login);
+    public void fillLogin(String login) {
+        driver.findElement(By.xpath(txtLogin)).sendKeys(login);   //эти методы заполняю нужные поля и нажимают кнопку
     }
 
-    public void fillPassword(String password){
+    public void fillPassword(String password) {
         driver.findElement(By.xpath(txtPassword)).sendKeys(password);
     }
 
-    public void clickEnter(){
+    public void clickEnter() {
         driver.findElement(By.xpath(buttonEnter)).click();
     }
 }
+

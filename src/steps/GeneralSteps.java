@@ -1,7 +1,6 @@
 package steps;
 
 import PageObjects.DragNDropPage;
-import PageObjects.PersonalLoans;
 import PageObjects.StartPage;
 
 public class GeneralSteps {
@@ -22,8 +21,8 @@ public class GeneralSteps {
     }
 
     public void findMyRate(String rate) {
-        PersonalLoans personalLoans = new PersonalLoans();
-        personalLoans.enterLoanAmount(rate);
-        personalLoans.clickFindMyRateButton();
+//        PersonalLoans personalLoans = new PersonalLoans();   //   Пока здесь не работает так как пропал соответствующий Object
+//        personalLoans.enterLoanAmount(rate);
+//        personalLoans.clickFindMyRateButton();
     }
 }

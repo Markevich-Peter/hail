@@ -34,12 +34,8 @@ public class LoginTest extends ChromeTestCase {
             ex.printStackTrace();
         }
         loginSteps.login(login, password);                                               //здесь используется метод login из LoginSteps
-//       try
-//       {
-//           Thread.sleep(30000);
-//       }
-//       catch(Exception e){}
-        assertEquals(driver.getCurrentUrl(), "http://www.test.dirtmixer.com");
+
+        assertEquals(driver.getCurrentUrl(), "http://www.test.dirtmixer.com/#intro");
     }
 
 }
